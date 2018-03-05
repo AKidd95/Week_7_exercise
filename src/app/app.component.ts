@@ -7,4 +7,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  video = {
+    title: 'Despacito',
+    views: 2,
+    liked: true
+  }
+
+  isShown: boolean = false
+
+  handleClick(){
+    console.log('someone clicked the 'Like' button on the template :-)')
+  }
+  handleParagraph(){
+    if(this.isShown == false) {
+      return this.isShown = true;
+    }
+    else{
+      return this.isShown = false;
+    }
+
+  }
 }
